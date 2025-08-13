@@ -1,25 +1,13 @@
-import React, { useState } from 'react'
+import React from 'react'
+import Navbar from './Navbar'
+import Footer from './Footer'
 const App = () => {
-  const [username, setUsername] = useState('');
-  const submitHandler = (e)=>{
-    e.preventDefault();
-    console.log(username)
-    setUsername("")
-  }
   return (
-    <div className='form'>
-      <form onSubmit={(e)=>{
-        submitHandler(e)
-      }}>
-        <input
-        value={username} 
-        onChange={(e)=>{
-          setUsername(e.target.value)
-        }} type="text" placeholder='Enter Username' />
-        <button>Submit</button>
-      </form>
+    <div>
+        <Navbar logo={"SHAH"}/>
+
+        <Footer/>
     </div>
   )
 }
-
 export default App
