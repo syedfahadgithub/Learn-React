@@ -4,34 +4,37 @@
   box-sizing: border-box;
   font-family:Arial, Helvetica, sans-serif ;
 }
-::selection{
-  background-color: rgb(89, 89, 116);
-  color: white;
+.main{
+  padding: 20px;
+  overflow: hidden;
 }
-.nav{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 15px 20px;
-  font-size: 70px;
-  background-color:rgba(40, 40, 99, 0.836) ;
+.comp{
+  display:flex;
+  gap: 5px;
+  margin-top: 10%;
 }
-.navR{
+.card{
+  width: 220px;
+  height: 300px;
+  text-align: center;
+  border: 2px solid gray;
   display: flex;
-  align-items: center;
-  gap: 30px;
-  font-size: 20px;
-  color: white;
-  cursor: pointer;
-}
-.footer{
-  font-size: 16px;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  display: flex;
-  align-items: center;
+  flex-direction: column;
+  gap: 50px;
   justify-content: center;
-  background-color: rgba(40, 40, 99, 0.836);
+  align-items: center;
+}
+.card h2{
+  font-size: 28px;
+}
+.card button{
+  padding: 10px;
+  width: 150px;
+  font-size: 20px;
+  border: none;
+  background-color:rgb(20, 20, 82) ;
   color: white;
+}
+.card p {
+  color: blue;
 }
