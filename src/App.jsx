@@ -1,33 +1,21 @@
-import axios from 'axios'
-import React, { useEffect, useState } from 'react'
-
+import React from 'react'
+import { Route, Routes } from 'react-router-dom'
+import About from './pages/About'
+import Home from './pages/Home'
+import Contact from './pages/Contact'
+import Product from './pages/Product'
+import Header from './components/Header'
 const App = () => {
-  const [data, setData] = useState([]);
-  const getimg = async ()=>{
-    const response = await axios.get('https://picsum.photos/v2/list')
-    setData(response.data)
- 
-  }
-   useEffect(() => {
-    getimg()
-  }, []);  
   return (
     <div>
-      <button onClick={()=>{
-        getimg()
-      }}>Get Data</button>
-      <div className='datapath'>
-        {data.map(function(elem,idx){
-        return <div key={idx} className='fetch'>
-          <img src={elem.download_url} alt="" />
-          <h1>{elem.author}</h1>
-        </div>
-
-      })}
-      </div>
-      
+        <Routes>
+          <Route path='/about' element={<About/>}/>
+          <Route path='/' element={<Home/>}/>
+          <Route path='/contact' element={<Contact/>}/>
+          <Route path='/product' element={<Product/>}/>
+        </Routes>
+        <Header/>
     </div>
   )
 }
-
 export default App

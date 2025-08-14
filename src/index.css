@@ -4,62 +4,32 @@
   box-sizing: border-box;
   font-family:Arial, Helvetica, sans-serif ;
 }
-.main{
-  padding: 20px;
-  overflow: hidden;
+.route h1{
+  font-size: 80px;
+  position: absolute;
+  top: 40%;
+  left: 30%;
 }
-.comp{
-  display:flex;
-  gap: 5px;
-  margin-top: 10%;
-}
-.card{
-  width: 220px;
-  height: 300px;
-  text-align: center;
-  border: 2px solid gray;
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
-  justify-content: center;
-  align-items: center;
-}
-.card h2{
-  font-size: 28px;
-}
-.card button{
-  padding: 10px;
-  width: 150px;
-  font-size: 20px;
-  border: none;
-  background-color:rgb(20, 20, 82) ;
-  color: white;
-}
-.card p {
-  color: blue;
-}
-button{
-  width: 150px;
-  font-size: 20px;
-  color: white;
-  background-color: rgba(31, 204, 31, 0.637);
-  padding: 10px;
-  border: none;
-  margin: 40px;
-}
-.datapath{
-  width: 100%;
-}
-.fetch{
-  width: 100%;
-  margin-bottom: 30px;
-  border: 1px solid black;
+.nav{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px;
+  padding: 15px;
+  background-color: rgba(0, 128, 6, 0.664);
 }
-.fetch img{
-  width: 400px;
-  height: 350px;
+.navL{
+  font-size: 50px;
+}
+.navL input{
+  width: 280px;
+  font-size: 25px;
+  padding: 10px;
+  outline: none;
+  border: none;
+  border-radius: 30px;
+}
+.navR{
+  display: flex;
+  gap: 70px;
+  font-size: 20px;
 }
