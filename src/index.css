@@ -38,3 +38,28 @@
 .card p {
   color: blue;
 }
+button{
+  width: 150px;
+  font-size: 20px;
+  color: white;
+  background-color: rgba(31, 204, 31, 0.637);
+  padding: 10px;
+  border: none;
+  margin: 40px;
+}
+.datapath{
+  width: 100%;
+}
+.fetch{
+  width: 100%;
+  margin-bottom: 30px;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+.fetch img{
+  width: 400px;
+  height: 350px;
+}

@@ -1,44 +1,31 @@
-import React from 'react'
-import Card from '../Card'
-const App = () => {
-  const users = [
-  {
-    "username": "ali_khan",
-    "city": "Lahore",
-    "age": 28,
-    "profession": "Software Engineer"
-  },
-  {
-    "username": "sana_ahmed",
-    "city": "Karachi",
-    "age": 32,
-    "profession": "Graphic Designer"
-  },
-  {
-    "username": "usman_raza",
-    "city": "Islamabad",
-    "age": 24,
-    "profession": "Digital Marketer"
-  },
-  {
-    "username": "fatima_qureshi",
-    "city": "Multan",
-    "age": 30,
-    "profession": "Doctor"
-  },
-  {
-    "username": "hamza_mir",
-    "city": "Faisalabad",
-    "age": 27,
-    "profession": "Civil Engineer"
-  }
-  ]
+import axios from 'axios'
+import React, { useEffect, useState } from 'react'
 
+const App = () => {
+  const [data, setData] = useState([]);
+  const getimg = async ()=>{
+    const response = await axios.get('https://picsum.photos/v2/list')
+    setData(response.data)
+ 
+  }
+   useEffect(() => {
+    getimg()
+  }, []);  
   return (
-    <div className='comp'>
-      {users.map(function(elem,idx){
-        return <Card key={idx} name={elem.username} city={elem.city} age={elem.age} prof={elem.profession}/>
+    <div>
+      <button onClick={()=>{
+        getimg()
+      }}>Get Data</button>
+      <div className='datapath'>
+        {data.map(function(elem,idx){
+        return <div key={idx} className='fetch'>
+          <img src={elem.download_url} alt="" />
+          <h1>{elem.author}</h1>
+        </div>
+
       })}
+      </div>
+      
     </div>
   )
 }
